@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="613.0" prefWidth="1022.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.examen.controller.AppController">
+    <children>
+        <Label fx:id="lbl_nume" layoutX="26.0" layoutY="14.0" prefHeight="36.0" prefWidth="221.0">
+            <font>
+                <Font size="24.0" />
+            </font></Label>
+        <TableView fx:id="table" layoutX="25.0" layoutY="50.0" prefHeight="193.0" prefWidth="638.0">
+            <columns>
+                <TableColumn fx:id="id_column" prefWidth="55.200016021728516" text="flightId" />
+                <TableColumn fx:id="from_column" prefWidth="114.0" text="from" />
+                <TableColumn fx:id="to_column" prefWidth="118.79997253417969" text="to" />
+                <TableColumn fx:id="departure_column" prefWidth="124.20001220703125" text="departure_time" />
+                <TableColumn fx:id="landing_column" prefWidth="134.20001220703125" text="landing_time" />
+                <TableColumn fx:id="seats_column" prefWidth="75.0" text="seats" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="from_cmbbox" layoutX="97.0" layoutY="250.0" onAction="#loadTable" prefWidth="150.0" />
+        <ComboBox fx:id="to_cmbbox" layoutX="97.0" layoutY="276.0" onAction="#loadTable" prefWidth="150.0" />
+        <Label layoutX="34.0" layoutY="249.0" prefHeight="26.0" prefWidth="61.0" text=" From:" />
+        <Label layoutX="34.0" layoutY="275.0" prefHeight="26.0" prefWidth="62.0" text="     To:" />
+        <DatePicker fx:id="date_picker" layoutX="255.0" layoutY="250.0" onAction="#loadTable" prefHeight="50.0" prefWidth="180.0" />
+        <Button layoutX="521.0" layoutY="264.0" mnemonicParsing="false" onAction="#clear_filters" text="Clear Filters" />
+      <TableView fx:id="tbl_ticket_client" layoutX="37.0" layoutY="326.0" prefHeight="200.0" prefWidth="607.0">
+        <columns>
+          <TableColumn fx:id="tblcol_flight_id_ticket" prefWidth="95.99999237060547" text="flight_id" />
+            <TableColumn fx:id="tblcol_username_ticket" prefWidth="247.1999969482422" text="username" />
+            <TableColumn fx:id="tblcol_purchasetime_ticket" prefWidth="257.5999755859375" text="purchasetime" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tbl_ticket_data" layoutX="747.0" layoutY="50.0" prefHeight="200.0" prefWidth="206.0">
+        <columns>
+          <TableColumn fx:id="tblcol_fid_data" prefWidth="75.0" text="flight_id" />
+          <TableColumn fx:id="tblcol_username_data" prefWidth="126.39996337890625" text="username" />
+        </columns>
+      </TableView>
+      <Button layoutX="514.0" layoutY="289.0" mnemonicParsing="false" onAction="#handleCumpara" text="Cumpara Bilet" />
+    </children>
+</AnchorPane>
